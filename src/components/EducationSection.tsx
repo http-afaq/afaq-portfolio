@@ -23,7 +23,9 @@ export const EducationSection = () => {
           </h2>
         </motion.div>
 
-        <div className="max-w-4xl grid md:grid-cols-2 gap-6">
+        <div className="max-w-6xl mx-auto space-y-6">
+
+          {/* Education (full width) */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -44,31 +46,67 @@ export const EducationSection = () => {
             </p>
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="p-6 rounded-2xl glass water-ripple hover:glow transition-all duration-500"
-          >
-            <div className="w-12 h-12 rounded-2xl bg-accent flex items-center justify-center mb-5">
-              <Award className="h-6 w-6 text-accent-foreground" />
-            </div>
-            <h3 className="font-display text-xl font-bold mb-4">Certificates</h3>
-            <div className="space-y-4">
-              {[
-                { title: "Python Programming", org: "Certificate of Completion — Fundamentals" },
-                { title: "WordPress", org: "Digiskills Training Certificate" },
-              ].map((cert) => (
-                <div key={cert.title} className="flex gap-3">
-                  <span className="w-1.5 h-1.5 rounded-full bg-accent mt-2 shrink-0" />
-                  <div>
-                    <p className="font-display font-bold text-sm">{cert.title}</p>
-                    <p className="text-xs text-muted-foreground">{cert.org}</p>
-                  </div>
+          {/* Certificates Grid (3 in one row) */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              {
+                title: "Python Programming",
+                org: "Certificate of Completion — Fundamentals",
+                details: "Covered core Python concepts including OOP, file handling, and basic data structures.",
+                skills: ["Python", "OOP", "File Handling"],
+              },
+              {
+                title: "WordPress",
+                org: "Digiskills Training Certificate",
+                details: "Learned website creation, theme customization, plugins, and SEO basics.",
+                skills: ["WordPress", "Elementor", "SEO"],
+              },
+              {
+                title: "Web Development",
+                org: "Practical Projects & Learning",
+                details: "Built responsive websites using React, Angular, and modern UI frameworks.",
+                skills: ["React", "Angular", "Tailwind"],
+              },
+            ].map((cert, index) => (
+              <motion.div
+                key={cert.title}
+                initial={{ opacity: 0, y: 20 }}
+                animate={inView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
+                className="p-6 rounded-2xl glass water-ripple hover:glow transition-all duration-500 group"
+              >
+                <div className="w-12 h-12 rounded-2xl bg-accent flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                  <Award className="h-6 w-6 text-accent-foreground" />
                 </div>
-              ))}
-            </div>
-          </motion.div>
+
+                <h3 className="font-display text-lg font-bold">{cert.title}</h3>
+
+                <p className="text-sm text-muted-foreground mt-1">
+                  {cert.org}
+                </p>
+
+                <p className="text-sm text-muted-foreground mt-3 leading-relaxed">
+                  {cert.details}
+                </p>
+
+                <div className="flex flex-wrap gap-2 mt-4">
+                  {cert.skills.map((skill) => (
+                    <span
+                      key={skill}
+                      className="px-2 py-1 text-xs rounded-full bg-secondary text-muted-foreground"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+
+                <span className="inline-block mt-4 px-3 py-1 rounded-full bg-secondary text-xs font-display text-muted-foreground">
+                  Verified
+                </span>
+              </motion.div>
+            ))}
+          </div>
+
         </div>
       </div>
     </section>

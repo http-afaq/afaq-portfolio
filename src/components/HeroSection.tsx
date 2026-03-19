@@ -161,8 +161,8 @@ export const HeroSection = () => {
                 <Button variant="outline" size="lg" asChild className="rounded-full px-8 font-display font-semibold text-base">
                   <a href="#projects">Projects</a>
                 </Button>
-                <Button variant="outline" size="lg" asChild className="rounded-full px-8 font-display font-semibold text-base group border-accent/50 text-accent hover:bg-accent/10">
-                  <a href="/resume.pdf" download>
+                <Button variant="outline" size="lg" asChild className="rounded-full px-8 font-display font-semibold text-base">
+                  <a href="/resume.pdf" download="Afaq_Ahmad_Resume.pdf">
                     <Download className="h-4 w-4 mr-2" />
                     Resume
                   </a>
@@ -191,7 +191,10 @@ export const HeroSection = () => {
                 >
                   <social.icon className="h-5 w-5" />
                 </a>
+                
               ))}
+              
+              
             </motion.div>
           </div>
 
@@ -234,7 +237,7 @@ export const HeroSection = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.8 }}
-          className="flex justify-center mt-12 sm:mt-16 mb-10"
+          className="flex justify-center mt-12 sm:mt-16 mb-10 -translate-y-6"
         >
           <a href="#about" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors group">
             <span className="font-display">Scroll Down</span>
