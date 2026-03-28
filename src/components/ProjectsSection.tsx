@@ -15,6 +15,29 @@ const projects = [
     icon: Layers,
     accent: true,
   },
+
+  {
+    title: "Task Matchers – Job Marketplace",
+    subtitle: "Angular Web App & Admin Panel",
+    description:
+      "A full-featured job marketplace platform with a powerful admin panel for managing jobs, users, and companies. Includes real-time chat, job approval workflows, and role-based access control.",
+    tech: ["Angular", "TypeScript", "Bootstrap", "SignalR", "REST APIs"],
+    features: ["Job Approval System", "Real-time Chat", "Role-based Access", "Responsive UI"],
+    icon: Layers,
+    accent: false,
+  },
+
+  {
+    title: "Smart Test Builder – Teacher Platform",
+    subtitle: "React SaaS Application",
+    description:
+      "A web-based platform for teachers to create, customize, and generate test papers instantly. Includes admin and teacher dashboards, PDF export, and subscription-based access.",
+    tech: ["React.js", "JavaScript", "Bootstrap", "REST APIs", "PDF Generation"],
+    features: ["Test Creation", "Edit & Customize", "PDF Download", "Admin & Teacher Panels"],
+    icon: Layers,
+    accent: true,
+  },
+
   {
     title: "Handwritten Digit Recognition",
     subtitle: "Machine Learning — AI Project",
@@ -51,7 +74,7 @@ export const ProjectsSection = () => {
           </h2>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-5xl">
+        <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-8 max-w-7xl mx-auto">
           {projects.map((project, i) => (
             <motion.div
               key={i}

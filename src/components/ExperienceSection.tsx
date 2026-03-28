@@ -49,7 +49,7 @@ export const ExperienceSection = () => {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="experience" className="py-28" ref={ref}>
+    <section id="experience" className="py-15" ref={ref}>
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -65,7 +65,7 @@ export const ExperienceSection = () => {
           </h2>
         </motion.div>
 
-        <div className="max-w-4xl relative">
+        <div className="max-w-7xl mx-auto relative">
           {/* Timeline line */}
           <div className="absolute left-6 top-0 bottom-0 w-px bg-border" />
 

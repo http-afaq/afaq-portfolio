@@ -85,7 +85,7 @@ export const SkillsSection = () => {
           </h2>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-8 max-w-6xl">
+        <div className="grid lg:grid-cols-2 gap-8 max-w-7xl mx-auto">
           {/* Left - Proficiency Levels */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}

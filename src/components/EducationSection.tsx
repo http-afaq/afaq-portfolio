@@ -7,7 +7,7 @@ export const EducationSection = () => {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="education" className="py-28" ref={ref}>
+    <section id="education" className="py-15" ref={ref}>
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -23,7 +23,7 @@ export const EducationSection = () => {
           </h2>
         </motion.div>
 
-        <div className="max-w-6xl mx-auto space-y-6">
+        <div className="max-w-7xl mx-auto mx-auto space-y-6">
 
           {/* Education (full width) */}
           <motion.div

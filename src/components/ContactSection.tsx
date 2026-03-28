@@ -17,7 +17,7 @@ export const ContactSection = () => {
   return (
     <section id="contact" className="py-28 relative overflow-hidden" ref={ref}>
       <div className="container mx-auto px-4">
-        <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-16 items-start">
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-start">
           {/* Left - CTA */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
