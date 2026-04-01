@@ -129,14 +129,19 @@ export const HeroSection = () => {
               transition={{ duration: 0.7, delay: 0.1 }}
               className="text-center lg:text-left"
             >
-              <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-display font-bold leading-[0.95] tracking-tight mb-4">
+              {/* Main heading */}
+              <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-display font-bold leading-[0.95] tracking-tight mb-2">
                 <span className="block text-gradient" style={{ minHeight: '1.1em' }}>
                   <span className="invisible absolute">ANGULAR DEVELOPER</span>
                   <span className="visible">{typedText}</span>
                   <span className="inline-block w-[3px] h-[0.85em] bg-accent ml-1 align-middle animate-pulse" />
                 </span>
-                <span className="block text-accent mt-2">& ENGINEER</span>
               </h1>
+
+              {/* Subtitle — smaller text */}
+              <p className="text-lg sm:text-xl md:text-2xl text-accent mt-2">
+                Turning ideas into interactive, user-friendly web apps
+              </p>
             </motion.div>
 
             {/* Description */}
@@ -191,10 +196,10 @@ export const HeroSection = () => {
                 >
                   <social.icon className="h-5 w-5" />
                 </a>
-                
+
               ))}
-              
-              
+
+
             </motion.div>
           </div>
 
