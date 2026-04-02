@@ -167,7 +167,11 @@ export const HeroSection = () => {
                   <a href="#projects">Projects</a>
                 </Button>
                 <Button variant="outline" size="lg" asChild className="rounded-full px-8 font-display font-semibold text-base">
-                  <a href="/resume.pdf" download="Afaq_Ahmad_Resume.pdf">
+                  <a
+                    href="https://drive.google.com/file/d/1Jg5SCcZ3tWCOkeAUTIqjD3l8M2D3vrzE/view"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <Download className="h-4 w-4 mr-2" />
                     Resume
                   </a>
