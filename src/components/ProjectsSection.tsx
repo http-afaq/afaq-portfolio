@@ -10,7 +10,7 @@ const projects = [
     description:
       "SaaS-based platform to simplify restaurant management and enhance customer experience with real-time order tracking and secure payments.",
     tech: ["Next.js", "React.js", "Tailwind CSS", "Material UI", "Shadcn", "Clerk Auth", "Hygraph CMS"],
-    link: "https://foodie-cart.vercel.app",
+    link: "",
     features: ["Menu Management", "Order Processing", "Real-Time Tracking", "Secure Payments"],
     icon: Layers,
     accent: true,

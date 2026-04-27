@@ -9,6 +9,8 @@ import { EducationSection } from "@/components/EducationSection";
 import { ContactSection } from "@/components/ContactSection";
 import { Footer } from "@/components/Footer";
 import { ScrollReveal } from "@/components/ScrollReveal";
+import { ProcessSection } from "@/components/ProcessSection";
+import { TestimonialsSection } from "@/components/TestimonialsSection";
 
 const Index = () => {
   return (
@@ -30,9 +32,15 @@ const Index = () => {
       <ScrollReveal>
         <ProjectsSection />
       </ScrollReveal>
+      <ScrollReveal direction="up">
+        <ProcessSection />
+      </ScrollReveal>
       <ScrollReveal direction="right">
         <EducationSection />
       </ScrollReveal>
+      {/* <ScrollReveal>
+        <TestimonialsSection />
+      </ScrollReveal> */}
       <ScrollReveal>
         <ContactSection />
       </ScrollReveal>
